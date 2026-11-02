@@ -92,3 +92,13 @@ The following audio clips were used in the game. Original video sources are cred
 
 
 
+#### **AI Assistance**
+
+
+
+AI tools were used as supplementary learning and debugging resources throughout development. Since I am still learning C# and Unity, AI assistance helped me understand unfamiliar code, troubleshoot errors, explore possible implementations, and improve existing scripts.
+
+
+
+All suggested code was reviewed, adapted where necessary, and tested within the project to ensure it worked with the game's existing systems.
+
