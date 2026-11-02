@@ -1,0 +1,236 @@
+fileFormatVersion: 2
+guid: 83e9af52673f7ad489f817d212670eb2
+ModelImporter:
+  serializedVersion: 24300
+  internalIDToNameTable: []
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Basecubematerialmain1Mat
+    second: {fileID: 2100000, guid: 34a82347b33d1f446a1c0545859e2371, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Circle001circle001materialmain1Mat
+    second: {fileID: 2100000, guid: c5dbc5ec9373c374c96fc239f4b2c98a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Circle003circle003materialmain1Mat
+    second: {fileID: 2100000, guid: 18707af93feb8af4baa4ec20c1d43223, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Circle004circle004materialmain1Mat
+    second: {fileID: 2100000, guid: 16d6d565d52bcf748b029f9f94b897e2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Circle006circle007materialmain1Mat
+    second: {fileID: 2100000, guid: 44fd7d519a0a66f4c960ede12c7066af, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Circle007circle007materialmain1Mat
+    second: {fileID: 2100000, guid: 09a1014eb761db64188d9dc7e80c67eb, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Clockplanematerialmain1Mat
+    second: {fileID: 2100000, guid: baf1cd8cbb9be6c429ab16705b5fc37e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Coffeecylinder001materialcoffee1Mat
+    second: {fileID: 2100000, guid: 161f93b5bbbfe6646a4b7bcf521e745d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Coffeeplatecirclematerialmain1Mat
+    second: {fileID: 2100000, guid: e7cd174ee5111164ab2241a70a6526df, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Cube002cube007materialmain1Mat
+    second: {fileID: 2100000, guid: 5a1d20d93d1b0f646bb140997f6816f7, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Cubecube010materialmain1Mat
+    second: {fileID: 2100000, guid: 251d167faa7cf6546b781a8617a49dd4, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Cylinder001cylinder004materialmain1Mat
+    second: {fileID: 2100000, guid: 9aad6050cb429e245acad3fe4558adad, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Cylinder002cylinder005materialmain1Mat
+    second: {fileID: 2100000, guid: 68368eee9d03e1e46b24069b5114ff55, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Cylinder003cylinder005materialmain1Mat
+    second: {fileID: 2100000, guid: e766a242b1c6aab43a84d5673fb8c4b9, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Cylindercylinder004materialmain1Mat
+    second: {fileID: 2100000, guid: d5c8db18309cb3a43b8c4aea716f279b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Frontplatecube003materialmain1Mat
+    second: {fileID: 2100000, guid: fd719f76540c28b43a9ef036031d0e78, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Glasscylindermaterialpot1Mat
+    second: {fileID: 2100000, guid: 78ec8714f383e2b4bb1c083d02a0eb42, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Handlecylinder011materialpot1Mat
+    second: {fileID: 2100000, guid: 3a1191b40a8af274dbb211d19cf91396, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Lid001cylinder010materialpot1Mat
+    second: {fileID: 2100000, guid: 864a526283ac85a45902abd339d9e788, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Lidtopcircle005materialpot1Mat
+    second: {fileID: 2100000, guid: e8c428fb64f3eed44a46478338f08a5c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mainlidthincube006materialmain1Mat
+    second: {fileID: 2100000, guid: 1743455799d00bf4a88d316a10e5c361, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mainlidwidecube005materialmain1Mat
+    second: {fileID: 2100000, guid: f09302a6585cae34fb6abd0f722db24f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metalfront001cube009materialmain1Mat
+    second: {fileID: 2100000, guid: 5b405d7bcee21164dbcc0f229c488c37, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metalfront002cube009materialmain1Mat
+    second: {fileID: 2100000, guid: e5cbbbad8cf37d640ba6f27bd098ed25, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metalstripcylinder002materialpot1Mat
+    second: {fileID: 2100000, guid: 0eee73fb67008f6448563d16ff600f07, type: 2}
+  materials:
+    materialImportMode: 2
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+    searchTexturesGlobally: 0
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    removeConstantScaleCurves: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 0
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importPhysicalCameras: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    nodeNameCollisionStrategy: 1
+    fileIdsGeneration: 2
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    keepQuads: 0
+    weldVertices: 1
+    bakeAxisConversion: 0
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    optimizeBones: 1
+    generateMeshLods: 0
+    meshLodGenerationFlags: 0
+    maximumMeshLod: -1
+    meshOptimizationFlags: -1
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVMarginMethod: 1
+    secondaryUVMinLightmapResolution: 40
+    secondaryUVMinObjectScale: 1
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    strictVertexDataChecks: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
+  importAnimation: 1
+  humanDescription:
+    serializedVersion: 3
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    globalScale: 1
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
+  animationType: 2
+  humanoidOversampling: 1
+  avatarSetup: 0
+  addHumanoidExtraRootOnlyWhenUsingAvatar: 1
+  importBlendShapeDeformPercent: 1
+  remapMaterialsIfMaterialImportModeIsNone: 0
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

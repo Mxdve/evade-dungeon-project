@@ -6,7 +6,7 @@ public class CameraToggle : MonoBehaviour
 {
     private CinemachineThirdPersonFollow thirdPersonFollow;
 
-    private bool thirdPerson = false;
+    public bool thirdPerson = false;
 
     void Start()
     {

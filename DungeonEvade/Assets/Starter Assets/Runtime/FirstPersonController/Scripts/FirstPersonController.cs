@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using System.Collections;
 #if ENABLE_INPUT_SYSTEM
 using UnityEngine.InputSystem;
 #endif
@@ -51,13 +52,19 @@ namespace StarterAssets
 		[Tooltip("How far in degrees can you move the camera down")]
 		public float BottomClamp = -90.0f;
 
-        [Header("Momentum")]
-        public float MaxMomentumSpeed = 16f;
-        public float MomentumGainRate = 2f;
-        private float _momentumBonus = 0f;
+		[Header("Momentum")]
+		public float MaxMomentumSpeed = 16f;
+		public float MomentumGainRate = 2f;
+		private float _momentumBonus = 0f;
 
-        // cinemachine
-        private float _cinemachineTargetPitch;
+		private float originalMoveSpeed;
+		private float originalSprintSpeed;
+		private float originalMaxMomentumSpeed;
+
+		private Coroutine speedEffectCoroutine;
+
+		// cinemachine
+		private float _cinemachineTargetPitch;
 
 		// player
 		private float _speed;
@@ -69,7 +76,7 @@ namespace StarterAssets
 		private float _jumpTimeoutDelta;
 		private float _fallTimeoutDelta;
 
-	
+
 #if ENABLE_INPUT_SYSTEM
 		private PlayerInput _playerInput;
 #endif
@@ -83,11 +90,11 @@ namespace StarterAssets
 		{
 			get
 			{
-				#if ENABLE_INPUT_SYSTEM
+#if ENABLE_INPUT_SYSTEM
 				return _playerInput.currentControlScheme == "KeyboardMouse";
-				#else
+#else
 				return false;
-				#endif
+#endif
 			}
 		}
 
@@ -107,12 +114,16 @@ namespace StarterAssets
 #if ENABLE_INPUT_SYSTEM
 			_playerInput = GetComponent<PlayerInput>();
 #else
-			Debug.LogError( "Starter Assets package is missing dependencies. Please use Tools/Starter Assets/Reinstall Dependencies to fix it");
+			Debug.LogError("Starter Assets package is missing dependencies. Please use Tools/Starter Assets/Reinstall Dependencies to fix it");
 #endif
 
 			// reset our timeouts on start
 			_jumpTimeoutDelta = JumpTimeout;
 			_fallTimeoutDelta = FallTimeout;
+
+			originalMoveSpeed = MoveSpeed;
+			originalSprintSpeed = SprintSpeed;
+			originalMaxMomentumSpeed = MaxMomentumSpeed;
 		}
 
 		private void Update()
@@ -141,7 +152,7 @@ namespace StarterAssets
 			{
 				//Don't multiply mouse input by Time.deltaTime
 				float deltaTimeMultiplier = IsCurrentDeviceMouse ? 1.0f : Time.deltaTime;
-				
+
 				_cinemachineTargetPitch += _input.look.y * RotationSpeed * deltaTimeMultiplier;
 				_rotationVelocity = _input.look.x * RotationSpeed * deltaTimeMultiplier;
 
@@ -161,36 +172,36 @@ namespace StarterAssets
 			// set target speed based on move speed, sprint speed and if sprint is pressed
 			float targetSpeed = _input.sprint ? SprintSpeed : MoveSpeed;
 
-            if (_input.move.y > 0)
-            {
-                _momentumBonus += MomentumGainRate * Time.deltaTime;
-                _momentumBonus = Mathf.Clamp(
-                    _momentumBonus,
-                    0f,
-                    MaxMomentumSpeed - MoveSpeed
-                );
+			if (_input.move.y > 0)
+			{
+				_momentumBonus += MomentumGainRate * Time.deltaTime;
+				_momentumBonus = Mathf.Clamp(
+					_momentumBonus,
+					0f,
+					MaxMomentumSpeed - MoveSpeed
+				);
 
-                targetSpeed += _momentumBonus;
-            }
-            else if (_input.move.y < 0)
-            {
-                // Walking backwards
-                _momentumBonus = 0f;
-                targetSpeed = MoveSpeed;
-            }
-            else if (_input.move == Vector2.zero)
-            {
-                _momentumBonus = 0f;
-            }
+				targetSpeed += _momentumBonus;
+			}
+			else if (_input.move.y < 0)
+			{
+				// Walking backwards
+				_momentumBonus = 0f;
+				targetSpeed = MoveSpeed;
+			}
+			else if (_input.move == Vector2.zero)
+			{
+				_momentumBonus = 0f;
+			}
 
 
-            targetSpeed += _momentumBonus;
+			targetSpeed += _momentumBonus;
 
-            // a simplistic acceleration and deceleration designed to be easy to remove, replace, or iterate upon
+			// a simplistic acceleration and deceleration designed to be easy to remove, replace, or iterate upon
 
-            // note: Vector2's == operator uses approximation so is not floating point error prone, and is cheaper than magnitude
-            // if there is no input, set the target speed to 0
-            if (_input.move == Vector2.zero) targetSpeed = 0.0f;
+			// note: Vector2's == operator uses approximation so is not floating point error prone, and is cheaper than magnitude
+			// if there is no input, set the target speed to 0
+			if (_input.move == Vector2.zero) targetSpeed = 0.0f;
 
 			// a reference to the players current horizontal velocity
 			float currentHorizontalSpeed = new Vector3(_controller.velocity.x, 0.0f, _controller.velocity.z).magnitude;
@@ -293,6 +304,37 @@ namespace StarterAssets
 
 			// when selected, draw a gizmo in the position of, and matching radius of, the grounded collider
 			Gizmos.DrawSphere(new Vector3(transform.position.x, transform.position.y - GroundedOffset, transform.position.z), GroundedRadius);
+		}
+
+		public void ApplySpeedEffect(float multiplier, float duration)
+		{
+			if (speedEffectCoroutine != null)
+			{
+				StopCoroutine(speedEffectCoroutine);
+			}
+
+			speedEffectCoroutine = StartCoroutine(
+				SpeedEffectRoutine(multiplier, duration)
+			);
+		}
+
+		private IEnumerator SpeedEffectRoutine(float multiplier, float duration)
+		{
+			MoveSpeed = originalMoveSpeed * multiplier;
+			SprintSpeed = originalSprintSpeed * multiplier;
+			MaxMomentumSpeed = originalMaxMomentumSpeed * multiplier;
+
+			Debug.Log("Speed effect activated!");
+
+			yield return new WaitForSeconds(duration);
+
+			MoveSpeed = originalMoveSpeed;
+			SprintSpeed = originalSprintSpeed;
+			MaxMomentumSpeed = originalMaxMomentumSpeed;
+
+			speedEffectCoroutine = null;
+
+			Debug.Log("Speed returned to normal!");
 		}
 	}
 }

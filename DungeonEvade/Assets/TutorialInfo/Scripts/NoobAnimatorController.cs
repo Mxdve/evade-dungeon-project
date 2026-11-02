@@ -25,13 +25,13 @@ public class NoobAnimatorController : MonoBehaviour
         animator.SetBool("Grounded", firstPersonController.Grounded);
         animator.SetFloat("VerticalVelocity", controller.velocity.y);
 
-        Debug.Log("Grounded: " + firstPersonController.Grounded);
+        // Debug.Log("Grounded: " + firstPersonController.Grounded);
 
         if (input.jump &&
             !jumpPressedLastFrame &&
             firstPersonController.Grounded)
         {
-            Debug.Log("JUMP TRIGGERED");
+            //Debug.Log("JUMP TRIGGERED");
             animator.SetTrigger("Jump");
         }
 

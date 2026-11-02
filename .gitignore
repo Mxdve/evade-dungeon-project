@@ -9,7 +9,7 @@
 /DungeonEvade/[Ll]ibrary/
 /DungeonEvade/[Tt]emp/
 /DungeonEvade/[Oo]bj/
-/DungeonEvade/[Bb]uild/
+/DungeonEvade/[Bb]uilds/
 /DungeonEvade/[Bb]uilds/
 /DungeonEvade/[Ll]ogs/
 /DungeonEvade/[Uu]ser[Ss]ettings/
@@ -107,7 +107,3 @@ InitTestScene*.unity*
 
 # Auto-generated cache in Assets folder
 /[Aa]ssets/[Ss]ceneDependencyCache*
-
-# Third-party Asset Store packs
-DungeonEvade/Assets/TirgamesAssets/
-DungeonEvade/Assets/TirgamesAssets.meta
